@@ -8,6 +8,8 @@ project_root = fileparts(test_folder);
 addpath(project_root);
 overall_pass = true;
 
+% Fixed seed so that the fading checks a and b print the same values on every run.
+rng(1);
 h = gen_fading(200000, 200, 1e-3);
 mean_power = mean(abs(h) .^ 2);
 if abs(mean_power - 1) <= 0.02
@@ -17,6 +19,7 @@ else
     overall_pass = false;
 end
 
+rng(1);
 h_low_fd = gen_fading(200000, 5, 1e-3);
 h_high_fd = gen_fading(200000, 200, 1e-3);
 lag_low_fd = abs(sum(h_low_fd(2:end) .* conj(h_low_fd(1:end-1))) / sqrt(sum(abs(h_low_fd(2:end)) .^ 2) * sum(abs(h_low_fd(1:end-1)) .^ 2)));
