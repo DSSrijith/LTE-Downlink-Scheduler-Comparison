@@ -104,7 +104,7 @@ The sanity checks run first. The full experiment suite (E1 to E4, 10 seeds each)
 | E3 | Maximum Doppler frequency (5, 50, 200 Hz) | Cell throughput per scheduler | `results/E3_doppler.csv` | `plots/E3_doppler_K10_seeds10.png` |
 | E4 | Maximum user distance (300 to 1500 m) | 5th-percentile throughput, cell throughput, Jain index | `results/E4_distance.csv` | `plots/E4_distance_K10_seeds10.png` |
 
-Error bars on E1 to E4 show the 95% confidence interval across the 10 seeds, computed as 1.96 × standard deviation / √n.
+Error bars on E1 and E3 show the 95% confidence interval across the 10 seeds, computed as 1.96 × standard deviation / √n. E2 and E4 plot the mean over the 10 seeds without error bars; their CSVs contain the per-seed values.
 
 ## Results
 
