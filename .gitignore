@@ -1,0 +1,20 @@
+# MATLAB autosave and cache files
+*.asv
+*.autosave
+*.m~
+slprj/
+*.p
+*.mex*
+*.err
+
+# Saved MATLAB workspaces
+*.mat
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# AI tool local files
+.codex/
